@@ -1,0 +1,32 @@
+.jumbotron {
+	background:          transparent;
+	background-position: center bottom;
+	background-size:     cover;
+
+	.row {
+		position: relative;
+	}
+
+	h1 {
+		color: #fff;
+		font-family: 'Nothing You Could Do', cursive;
+		text-align: center;
+		text-shadow: 5px 5px 15px #000000;
+	}
+}
+
+@media #{$small} {
+	.jumbotron {
+		h1 {
+			font-size: 60px;
+		}
+	}
+}
+
+@media #{$medium} {
+	.jumbotron {
+		h1 {
+			font-size: 77px;
+		}
+	}
+}

@@ -1,0 +1,134 @@
+p {
+	font-weight: 300;
+}
+
+h1 {
+	margin-top: 0;
+
+	small {
+		color:       $brand-primary;
+		font-weight: 300;
+		font-size:   $font-size-h3;
+	}
+}
+
+h2 {
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+ul.connections-latest {
+	li {
+		h2 {
+			font-size: $font-size-h4
+		}
+	}
+}
+
+.connections-link {
+	margin: ceil(($line-height-computed / 1.5)) 0 0;
+}
+
+article {
+	p {
+		&.post-date {
+			font-size:      $font-size-small;
+			border-bottom:  1px solid $gray-lighter;
+			padding-bottom: ceil(($line-height-computed * 0.5));
+		}
+
+		a {
+			font-weight: 600;
+
+			&[href$=".pdf"]:after {
+				content: " (PDF)";
+			}
+			&[href$=".doc"]:after,
+			&[href$=".docx"]:after {
+				content: " (DOC)";
+			}
+		}
+	}
+
+	ol,
+	ul {
+		a {
+			font-weight: 600;
+		}
+	}
+
+	.tags {
+		h2 {
+			border-top:  1px solid $gray-lighter;
+			margin-top:  0;
+			padding-top: ceil(($line-height-computed * 0.5));
+		}
+	}
+}
+
+aside {
+	.well {
+		p {
+			&:only-of-type,
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// comments styling
+.comments-row {
+	h2 {
+		border-top:  1px solid $gray-lighter;
+		margin-top:  0;
+		padding-top: ceil(($line-height-computed * 0.5));
+	}
+
+	.comments-list,
+	.children {
+		list-style-type: none;
+		padding:         0;
+
+		li {
+			article {
+				margin: 0 0 ceil(($line-height-computed / 2));
+			}
+			.comment-meta {
+				border-bottom:  1px solid lighten($brand-primary, 60%);
+				margin-bottom:  ceil(($line-height-computed / 2));
+				padding-bottom: ceil(($line-height-computed / 2));
+
+				.comment-author.vcard {
+					img {
+						display: none;
+					}
+				}
+				.comment-metadata {
+					font-size:   $font-size-small;
+					padding-top: ceil(($line-height-computed / 2.5));
+
+					.comment-edit-link {
+						&:before {
+							content: "| ";
+						}
+					}
+				}
+			}
+		}
+	}
+	.children {
+		border-left:  15px solid $gray-lighter;
+		padding-left: 15px;
+	}
+}
+
+.comment-respond {
+	form {
+		textarea {
+			margin-bottom: 15px;
+			font-weight:   300;
+		}
+	}
+}

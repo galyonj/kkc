@@ -5,7 +5,7 @@ cache: pip
 install:
   - pip install ansible
 script:
-  - ansible-galaxy install --force -r requirements.yml -p vendor/roles
+  - ansible-galaxy install --force -r requirements.yml -p plugin/roles
   - ansible-playbook --syntax-check -e env=development deploy.yml
   - ansible-playbook --syntax-check -e env=development dev.yml
   - ansible-playbook --syntax-check -e env=development server.yml

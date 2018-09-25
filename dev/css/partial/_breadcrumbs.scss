@@ -1,0 +1,26 @@
+.breadcrumb {
+	background:      none;
+	list-style-type: none;
+	margin:          0 0 ceil(($line-height-computed / 1.2)) ;
+	padding:         ceil(($line-height-computed / 1.2)) 0 0;
+
+	& > li {
+		font-size:   ceil(($font-size-small * 0.9));
+		font-weight: 300;
+
+		a {
+			color:       $brand-primary;
+			font-weight: 600;
+		}
+
+		& + li:before {
+			content: "/";
+		}
+	}
+}
+
+@media #{$small} {
+	.breadcrumb {
+		padding: 65px 0 0;
+	}
+}

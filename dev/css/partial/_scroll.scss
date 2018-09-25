@@ -1,0 +1,18 @@
+.scroll-top {
+	position:         fixed;
+	bottom:           15px;
+	right:            15px;
+	color:            rgba(255, 255, 255, 0.75);
+	border-radius:    100%;
+	border:           1px solid #fff;
+	background-color: $brand-primary;
+	font-size:        ceil(($font-size-base * 1.2));
+	padding:          3px 11px 8px;
+	z-index:          1001;
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: #fff;
+	}
+}

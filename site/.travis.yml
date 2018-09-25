@@ -16,7 +16,7 @@ cache:
   apt: true
   directories:
     - $HOME/.composer/cache
-    - vendor
+    - plugin
 
 before_install:
   - phpenv config-rm xdebug.ini || true

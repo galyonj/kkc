@@ -2,8 +2,14 @@
 - block:
   - name: Add MariaDB APT key
     apt_key:
-      keyserver: "{{ mariadb_keyserver }}"
-      id: "{{ mariadb_keyserver_id }}"
+      keyserver: hkp://keyserver.ubuntu.com:80
+      id: "{{ mariadb_keyserver_fingerprint }}"
+      state: present
+
+  - name: Add MariaDB MySQL deb and deb-src
+    apt_repository:
+      repo: "deb [arch=amd64,i386,ppc64el] http://{{ mariadb_mirror }}/mariadb/repo/{{ mariadb_version }}/ubuntu {{ mariadb_dist | default(ansible_distribution_release) }} main"
+      state: present
 
   - name: Add MariaDB PPA
     apt_repository:
@@ -40,10 +46,10 @@
       check_implicit_admin: yes
       state: present
     with_items:
-      - "{{ inventory_hostname }}"
-      - 127.0.0.1
-      - ::1
-      - localhost
+    - "{{ inventory_hostname }}"
+    - 127.0.0.1
+    - ::1
+    - localhost
 
   - name: Copy .my.cnf file with root password credentials.
     template:
@@ -59,9 +65,9 @@
       host: "{{ item }}"
       state: absent
     with_items:
-      - localhost
-      - "{{ inventory_hostname }}"
-      - "{{ ansible_hostname }}"
+    - localhost
+    - "{{ inventory_hostname }}"
+    - "{{ ansible_hostname }}"
 
   - name: Remove the test database
     mysql_db:

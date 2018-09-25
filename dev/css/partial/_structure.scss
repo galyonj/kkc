@@ -1,0 +1,26 @@
+.notification-wrapper {
+	margin: 0 0 15px;
+
+	h2 {
+		margin-top: 0;
+		text-align: center;
+	}
+
+	p {
+		a {
+			font-weight: 600;
+		}
+	}
+}
+
+.content-wrapper {
+	margin-bottom: 30px;
+}
+
+@media #{$small} {
+	.content-wrapper {
+		> .container {
+			padding-top: 125px;
+		}
+	}
+}

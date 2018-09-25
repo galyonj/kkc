@@ -9,10 +9,10 @@ project_version: "{{ project.branch | default('master') }}"
 project_source_path: "{{ project_root }}/shared/source"
 
 # There are certain folders you'll want to copy from release to release to speed up deploys.
-# Examples: Composer's `vendor` folder, npm's `node_modules`.
+# Examples: Composer's `plugin` folder, npm's `node_modules`.
 # These should not be part of project_shared_children since dependencies need to be atomic and tied to a deploy.
 project_copy_folders:
-  - vendor
+  - plugin
 
 # All the templates to process on the remote system on deploy. These could contain config files.
 # `src` and `dest` paths work the same as project_local_files.
