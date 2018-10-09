@@ -10,6 +10,21 @@ h1 {
 		font-weight: 300;
 		font-size:   $font-size-h3;
 	}
+
+	&.front-page-display {
+		font-family: 'Nothing You Could Do', cursive;
+		margin:      40px 0;
+		text-align:  center;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+		@media #{$small} {
+			font-size: 60px;
+		}
+
+		@media #{$medium} {
+			font-size: 77px;
+		}
+	}
 }
 
 h2 {

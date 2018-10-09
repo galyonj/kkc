@@ -1187,6 +1187,7 @@ header:not([class]) .navbar-form .btn-primary{background:#c5e9d9;color:#1b4834}
 p{font-weight:300}
 h1{margin-top:0}
 h1 small{color:#1b4834;font-weight:300;font-size:25px}
+h1.front-page-display{font-family:'Nothing You Could Do',cursive;margin:40px 0;text-align:center;text-shadow:2px 2px 5px rgba(0,0,0,0.3)}
 h2:first-of-type{margin-top:0}
 ul.connections-latest li h2{font-size:21px}
 .connections-link{margin:17px 0 0}
@@ -1414,11 +1415,13 @@ header:not([class]) .navbar-default .navbar-nav>li .dropdown-menu{background:tra
 header:not([class]) .navbar-default .navbar-nav>.open>a{background:transparent;color:#fff}
 header:not([class]) .navbar-default .navbar-nav>.open>a:focus,header:not([class]) .navbar-default .navbar-nav>.open>a:hover{background:transparent;color:#fff}
 header:not([class]) .navbar-default .navbar-form{padding:0 15px 15px;border-radius:0 0 4px 4px}
+header:not([class]) .navbar-default .navbar-form:active,header:not([class]) .navbar-default .navbar-form:focus,header:not([class]) .navbar-default .navbar-form:hover{background:#1b4834}
 header:not([class]) .navbar-default .navbar-form .form-control,header:not([class]) .navbar-default .navbar-form .widget-sidebar .widget select,.widget-sidebar .widget header:not([class]) .navbar-default .navbar-form select{font-size:15px;width:300px}
 header:not([class]) .navbar{position:relative}
 header:not([class]) .navbar .nav-stripe{background:#1b4834;height:50px;width:100%;position:absolute;top:55px;z-index:-2}
 header:not([class]) .navbar .container .navbar-brand{background:#fff;border:5px solid #1b4834;border-radius:100%;padding:40px 15px}
 .jumbotron h1{font-size:60px}
+h1.front-page-display{font-size:60px}
 .text-columns,.list--multi-col{-webkit-column-count:2;column-count:2;-webkit-column-gap:30px;column-gap:30px}
 .text-columns li,.list--multi-col li{display:block;font-weight:300;list-style:none;margin:0 !important;width:100%}
 .four-column li,.three-column li,.two-column li{margin:0 30px 20px 0;width:345px}
@@ -1505,6 +1508,7 @@ th.visible-md,td.visible-md{display:table-cell !important}
 }@media only screen and (min-width:992px){header:not([class]) .navbar-default .navbar-nav>li>a{font-size:17px;padding:0 0 0 35px}
 header:not([class]) .navbar-default .navbar-nav>li .dropdown-menu{right:-15px}
 .jumbotron h1{font-size:77px}
+h1.front-page-display{font-size:77px}
 .facilities li{-webkit-box-flex:1;-ms-flex:1 30%;flex:1 30%;margin:0 30px 30px 0}
 .facilities li:nth-of-type(3n){margin:0 0 30px 0}
 .two-column li{width:293px}

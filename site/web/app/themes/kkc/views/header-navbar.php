@@ -51,7 +51,7 @@
 						</div>
 					</form>
 				</li>
-				<li class="hidden-xs">
+				<li class="hidden-xs dropdown">
 					<a href="#" title="Search" class="dropdown-toggle" data-toggle="dropdown"
 					   role="button" aria-expanded="false"><i class="fa fa-search" aria-hidden="true"></i></a>
 					<ul class="dropdown-menu" role="menu">

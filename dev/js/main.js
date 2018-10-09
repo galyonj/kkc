@@ -49,10 +49,15 @@ $(document).ready(function() {
 
 	// set focus to the search bar when it's been exposed
 	// at sizes larger than 767px.
-	$('.dropdown').on('shown.bs.dropdown', function(){
-		$('.dropdown-menu input').focus();
-		console.log('Search input focus');
+	$('.dropdown').on('shown.bs.dropdown', function(e) {
+		var dropdown = $(e.target);
+
+		setTimeout(function() {
+			console.log('Search focus!');
+			$('.dropdown-menu li .navbar-form .search-query.form-control').focus();
+		}, 30);
 	});
+
 	// hide the scroll button on page load
 	$('.scroll-top').hide();
 
